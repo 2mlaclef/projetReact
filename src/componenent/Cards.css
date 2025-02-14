@@ -1,12 +1,48 @@
+/* Styles généraux */
 .cartes {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 100px;
+  display: grid; /* Utilisation de CSS Grid */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Répartit automatiquement les cartes */
+  gap: 20px; /* Espace entre les cartes */
+  padding: 20px;
+  margin: 50px 10px; /* Marges pour les petits écrans */
 }
 
 .cart {
- border-radius: 20px;
+  border-radius: 20px;
   box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden; 
+  overflow: hidden;
+  background-color: white;
+}
+
+.cart img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Assure que l'image reste proportionnelle */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.cart .card-body {
+  padding: 15px;
+}
+
+/* Media Queries pour petits écrans (smartphones) */
+@media (max-width: 768px) {
+  .cartes {
+    grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+  }
+}
+
+/* Media Queries pour tablettes */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cartes {
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les tablettes */
+  }
+}
+
+/* Media Queries pour grands écrans */
+@media (min-width: 1025px) {
+  .cartes {
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes pour les grands écrans */
+  }
 }
