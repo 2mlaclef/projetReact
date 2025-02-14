@@ -1,0 +1,12 @@
+.cartes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px;
+}
+
+.cart {
+ border-radius: 20px;
+  box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; 
+}

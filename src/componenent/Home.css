@@ -1,0 +1,70 @@
+.banner {
+  padding: 20px;
+  text-align: center;
+  background-image: url("public/1.jpg"); /* Chemin relatif ou absolu */
+  background-size: cover; /* Ou contain, auto, etc. selon vos besoins */
+  background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+  /* Optionnel: pour centrer l'image */
+  background-position: center;
+  height: 780px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h1 {
+  font-size: 4.5em;
+  color: #ffffff;
+  margin: 0;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 2em;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background-color: orange !important;
+  border-color: orange !important;
+  height: 70px;
+  width: 250px;
+  margin-top: 30px;
+  &:hover {
+    background-color: hsl(27, 100%, 50%) !important;
+    border-color: hsl(27, 100%, 50%) !important;
+  }
+}
+
+.container-presentation {
+  display: flex; /* Pour aligner les éléments horizontalement */
+  justify-content: space-around; /* Pour espacer les éléments */
+  background-color: hsla(0, 19%, 92%, 0.808);
+  height: 500px;
+  align-items: center;
+}
+
+.chef, .horaires, .emplacement {
+  text-align: center; /* Pour centrer le texte */
+}
+
+.chef img, .horaires img, .emplacement img {
+  width: 100px; /* Ajustez la taille des images */
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.chef h3, .horaires h3, .emplacement h3 {
+  margin-bottom: 5px;
+}
+
+.specialite h1 {
+    font-size: 3em;
+  color: #000000;
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+ margin: 100px;
+}
