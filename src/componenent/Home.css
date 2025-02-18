@@ -29,20 +29,29 @@ body {
   color: #ffffff;
   margin: 0;
   font-weight: bold;
+  text-align: center;
 }
 
 .banner p {
   font-size: 2em;
   color: #ffffff;
   margin-top: 10px;
+  text-align: center;
 }
 
+/* Bouton personnalisé */
 .btn-primary {
   background-color: orange !important;
   border-color: orange !important;
   height: 70px;
   width: 250px;
   margin-top: 30px;
+  font-size: 1.5rem;
+  white-space: nowrap; /* Empêche le retour à la ligne */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .btn-primary:hover {
@@ -92,7 +101,7 @@ body {
   margin: 100px;
 }
 
-/* Media Queries pour petits écrans (smartphones) */
+/* 🔹 Media Queries pour petits écrans (smartphones) */
 @media (max-width: 768px) {
   .banner {
     height: 500px; /* Réduit la hauteur pour les petits écrans */
@@ -107,8 +116,10 @@ body {
   }
 
   .btn-primary {
-    height: 50px; /* Réduit la taille du bouton */
-    width: 200px;
+    font-size: 1.2rem; /* Réduit la taille du texte */
+    height: 60px;
+    width: 220px;
+    padding: 10px;
   }
 
   .container-presentation {
@@ -136,7 +147,29 @@ body {
   }
 }
 
-/* Media Queries pour tablettes */
+/* 🔹 Media Queries pour très petits écrans (moins de 480px) */
+@media (max-width: 480px) {
+  .banner {
+    height: 450px;
+  }
+
+  .banner h1 {
+    font-size: 2.5em;
+  }
+
+  .banner p {
+    font-size: 1em;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    height: 50px;
+    width: 200px;
+    padding: 8px;
+  }
+}
+
+/* 🔹 Media Queries pour tablettes */
 @media (min-width: 769px) and (max-width: 1024px) {
   .banner {
     height: 600px; /* Ajuste la hauteur pour les tablettes */
@@ -144,6 +177,12 @@ body {
 
   .banner h1 {
     font-size: 3.5em; /* Ajuste la taille du texte */
+  }
+
+  .btn-primary {
+    font-size: 1.3rem;
+    height: 65px;
+    width: 230px;
   }
 
   .chef,

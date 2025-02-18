@@ -1,38 +1,39 @@
-// Footer.jsx
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import {
+  FaInstagram,
+  FaFacebook,
+  FaTelegram,
+  FaLinkedin,
+  FaPhone,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import "./Footer.css";
-
-// Import SVG icons
-import instagramIcon from "../assets/instagram.svg";
-import facebookIcon from "../assets/facebook.svg";
-import telegramIcon from "../assets/telegram.svg";
-import linkedinIcon from "../assets/linkedin.svg";
 
 const socialLinks = [
   {
     name: "Instagram",
-    icon: instagramIcon,
+    icon: <FaInstagram />,
     url: "https://instagram.com",
-    hoverColor: "#E1306C",
+    color: "#E1306C",
   },
   {
     name: "Facebook",
-    icon: facebookIcon,
+    icon: <FaFacebook />,
     url: "https://facebook.com",
-    hoverColor: "#4267B2",
+    color: "#4267B2",
   },
   {
     name: "Telegram",
-    icon: telegramIcon,
+    icon: <FaTelegram />,
     url: "https://telegram.org",
-    hoverColor: "#0088cc",
+    color: "#0088cc",
   },
   {
     name: "LinkedIn",
-    icon: linkedinIcon,
+    icon: <FaLinkedin />,
     url: "https://linkedin.com",
-    hoverColor: "#0077b5",
+    color: "#0077b5",
   },
 ];
 
@@ -46,11 +47,11 @@ const Footer = () => {
             <h2 className="contact-title mb-4">Contactez-nous</h2>
             <div className="contact-info mb-4">
               <div className="d-flex align-items-center mb-3">
-                <i className="fas fa-phone me-3"></i>
+                <FaPhone className="me-3" size={20} />
                 <span>+33 1 23 45 67 89</span>
               </div>
               <div className="d-flex align-items-center mb-3">
-                <i className="fas fa-map-marker-alt me-3"></i>
+                <FaMapMarkerAlt className="me-3" size={20} />
                 <span>123 Rue de la Gastronomie, Paris</span>
               </div>
             </div>
@@ -66,15 +67,15 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-link"
-                    style={{ "--hover-color": social.hoverColor }}
+                    style={{
+                      color: "white",
+                      fontSize: "24px",
+                      transition: "0.3s",
+                    }}
+                    onMouseEnter={(e) => (e.target.style.color = social.color)}
+                    onMouseLeave={(e) => (e.target.style.color = "white")}
                   >
-                    <Image
-                      src={social.icon}
-                      alt={social.name}
-                      width={24}
-                      height={24}
-                      className="social-icon"
-                    />
+                    {social.icon}
                   </a>
                 ))}
               </div>
